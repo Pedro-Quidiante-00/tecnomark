@@ -1,0 +1,305 @@
+{
+  "destacados": [
+    {
+      "id": 1,
+      "nombre": "Samsung Galaxy S24 Ultra",
+      "precio": 1299990,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "Snapdragon 8 Gen 3" }
+    },
+    {
+      "id": 2,
+      "nombre": "iPhone 15 Pro Max",
+      "precio": 1450000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "A17 Pro Bionic" }
+    },
+    {
+      "id": 3,
+      "nombre": "Xiaomi 14 Ultra",
+      "precio": 990000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "Snapdragon 8 Gen 3" }
+    },
+    {
+      "id": 4,
+      "nombre": "MacBook Pro 14 M3",
+      "precio": 1890000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "notebooks",
+      "caracteristicas": { "tarjetas_de_video": "M3 Pro 14-Core GPU + Neural Engine" }
+    }
+  ],
+
+  "telefonos": [
+    {
+      "id": 1,
+      "nombre": "Samsung Galaxy S24 Ultra",
+      "precio": 1299990,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "Snapdragon 8 Gen 3" }
+    },
+    {
+      "id": 2,
+      "nombre": "iPhone 15 Pro Max",
+      "precio": 1450000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "A17 Pro Bionic" }
+    },
+    {
+      "id": 3,
+      "nombre": "Xiaomi 14 Ultra",
+      "precio": 990000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "Snapdragon 8 Gen 3" }
+    }
+  ],
+
+  "hardware": [
+    {
+      "id": 7,
+      "nombre": "NVIDIA RTX 4070 Super",
+      "precio": 720000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "GPU",
+      "especificaciones": { "gpu": "12GB GDDR6X" }
+    },
+    {
+      "id": 8,
+      "nombre": "AMD Radeon RX 7800 XT",
+      "precio": 640000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "GPU",
+      "especificaciones": { "gpu": "16GB GDDR6" }
+    },
+    {
+      "id": 9,
+      "nombre": "Intel Core i7-14700K",
+      "precio": 450000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "CPU",
+      "especificaciones": { "nucleos_hilos": "20 Núcleos / 28 Hilos" }
+    },
+    {
+      "id": 10,
+      "nombre": "AMD Ryzen 7 7800X3D",
+      "precio": 410000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "CPU",
+      "especificaciones": { "nucleos_hilos": "8 Núcleos / 16 Hilos" }
+    },
+    {
+      "id": 11,
+      "nombre": "Corsair Vengeance RGB",
+      "precio": 135000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "RAM",
+      "especificaciones": { "capacidad": "32GB (2x16)", "velocidad": "6000MHz" }
+    },
+    {
+      "id": 12,
+      "nombre": "Kingston Fury Beast",
+      "precio": 65000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "RAM",
+      "especificaciones": { "capacidad": "16GB (2x8)", "velocidad": "5200MHz" }
+    },
+    {
+      "id": 19,
+      "nombre": "Intel Core i5-13600K",
+      "precio": 310000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "CPU",
+      "especificaciones": { "nucleos_hilos": "14 Núcleos / 20 Hilos" }
+    }
+  ],
+
+  "todos": [
+    {
+      "id": 1,
+      "nombre": "Samsung Galaxy S24 Ultra",
+      "precio": 1299990,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "Snapdragon 8 Gen 3" }
+    },
+    {
+      "id": 2,
+      "nombre": "iPhone 15 Pro Max",
+      "precio": 1450000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "A17 Pro Bionic" }
+    },
+    {
+      "id": 3,
+      "nombre": "Xiaomi 14 Ultra",
+      "precio": 990000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "telefonos",
+      "caracteristicas": { "procesador": "Snapdragon 8 Gen 3" }
+    },
+    {
+      "id": 4,
+      "nombre": "MacBook Pro 14 M3",
+      "precio": 1890000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "notebooks",
+      "caracteristicas": { "tarjetas_de_video": "M3 Pro 14-Core GPU + Neural Engine" }
+    },
+    {
+      "id": 5,
+      "nombre": "Asus ROG Strix G16",
+      "precio": 1650000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "notebooks",
+      "caracteristicas": { "tarjetas_de_video": "RTX 4060 8GB + Intel UHD" }
+    },
+    {
+      "id": 6,
+      "nombre": "Lenovo Legion Slim 5",
+      "precio": 1150000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "notebooks",
+      "caracteristicas": { "tarjetas_de_video": "RTX 4050 6GB + AMD Radeon" }
+    },
+    {
+      "id": 7,
+      "nombre": "NVIDIA RTX 4070 Super",
+      "precio": 720000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "GPU",
+      "especificaciones": { "gpu": "12GB GDDR6X" }
+    },
+    {
+      "id": 8,
+      "nombre": "AMD Radeon RX 7800 XT",
+      "precio": 640000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "GPU",
+      "especificaciones": { "gpu": "16GB GDDR6" }
+    },
+    {
+      "id": 9,
+      "nombre": "Intel Core i7-14700K",
+      "precio": 450000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "CPU",
+      "especificaciones": { "nucleos_hilos": "20 Núcleos / 28 Hilos" }
+    },
+    {
+      "id": 10,
+      "nombre": "AMD Ryzen 7 7800X3D",
+      "precio": 410000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "CPU",
+      "especificaciones": { "nucleos_hilos": "8 Núcleos / 16 Hilos" }
+    },
+    {
+      "id": 11,
+      "nombre": "Corsair Vengeance RGB",
+      "precio": 135000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "RAM",
+      "especificaciones": { "capacidad": "32GB (2x16)", "velocidad": "6000MHz" }
+    },
+    {
+      "id": 12,
+      "nombre": "Kingston Fury Beast",
+      "precio": 65000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "RAM",
+      "especificaciones": { "capacidad": "16GB (2x8)", "velocidad": "5200MHz" }
+    },
+    {
+      "id": 13,
+      "nombre": "Logitech G Pro X Superlight 2",
+      "precio": 149000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "perifericos",
+      "tipo": "Mouse",
+      "especificaciones": { "tracking": "Sensor HERO 25K" }
+    },
+    {
+      "id": 14,
+      "nombre": "Razer DeathAdder V3",
+      "precio": 79000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "perifericos",
+      "tipo": "Mouse",
+      "especificaciones": { "tracking": "Focus Pro 30K" }
+    },
+    {
+      "id": 15,
+      "nombre": "Keychron K2 Pro",
+      "precio": 105000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "perifericos",
+      "tipo": "Teclado",
+      "especificaciones": { "tipo": "Mecánico 75%", "tipo_de_switch": "Gateron Brown" }
+    },
+    {
+      "id": 16,
+      "nombre": "HyperX Alloy Origins",
+      "precio": 85000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "perifericos",
+      "tipo": "Teclado",
+      "especificaciones": { "tipo": "Mecánico Full", "tipo_de_switch": "HyperX Red" }
+    },
+    {
+      "id": 17,
+      "nombre": "LG UltraGear 27GN800",
+      "precio": 320000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "perifericos",
+      "tipo": "Monitor",
+      "especificaciones": { "resolucion": "2560x1440 (QHD)", "tasa_de_refresco": "144Hz" }
+    },
+    {
+      "id": 18,
+      "nombre": "Samsung Odyssey G5",
+      "precio": 350000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "perifericos",
+      "tipo": "Monitor",
+      "especificaciones": { "resolucion": "3440x1440 (Ultrawide)", "tasa_de_refresco": "165Hz" }
+    },
+    {
+      "id": 19,
+      "nombre": "Intel Core i5-13600K",
+      "precio": 310000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "hardware",
+      "tipo": "CPU",
+      "especificaciones": { "nucleos_hilos": "14 Núcleos / 20 Hilos" }
+    },
+    {
+      "id": 20,
+      "nombre": "Asus TUF Gaming F15",
+      "precio": 950000,
+      "imagen_url": "https://via.placeholder.com/300",
+      "categoria": "notebooks",
+      "caracteristicas": { "tarjetas_de_video": "RTX 3050 + Intel Iris" }
+    }
+  ]
+}

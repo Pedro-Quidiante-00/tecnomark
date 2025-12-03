@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import HomeComponent from '../components/HomeComponent.astro'
+import DestacadosComponent from '../components/DestacadosComponent.astro'
+import TelefonosComponent from '../components/telefonosComponent.astro';
+import HardwareComponent from "../components/hardwareComponent.astro";
+---
+<Layout>
+        <HomeComponent />
+    <DestacadosComponent
+            titulo="productos destacados"
+
+    />
+    <TelefonosComponent
+            titulo="Telefonos"
+    />
+    <HardwareComponent
+            titulo="Lo ultimo en hardware"
+    />
+</Layout>

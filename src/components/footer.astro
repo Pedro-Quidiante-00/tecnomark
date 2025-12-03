@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import logo from "../assets/image/general/logo.png"
+
+const logoslogan = {
+    name: "TecnoMark",
+    description: "Lo que buscas a la punta de tus dedos.",};
+const navLinks = [
+    { name: "Celulares", href: "/celulares" },
+    { name: "Hardware", href: "/hardware" },
+    { name: "Periféricos", href: "/perifericos" },
+    { name: "Notebook", href: "/notebook" },
+];
+
+const infoLinks = [
+    { name: "Sobre Nosotros", href: "/nosotros" },
+    { name: "Contacto", href: "/contacto" },
+];
+---
+
+<footer class="bg-gray-950 relative">
+    <div class="container mx-auto py-10 grid grid-cols-3 gap-8 text-gray-700">
+        <!-- Logo / Marca -->
+        <div>
+            <Image src={logo} alt="logo" class="w-30 py-2 opacity-65"/>
+            <h2 class="text-2xl text-white font-bold" >{logoslogan.name}</h2>
+            <p class="mt-2 text-sm text-gray-100">{logoslogan.description}</p>
+        </div>
+
+        <!-- Navegación -->
+        <div>
+            <h2 class="font-bold mb-3 text-2xl text-white">Navega</h2>
+            <ul class="space-y-2">
+                {navLinks.map(link => (
+                        <li>
+                            <a href={link.href} class="text-gray-100 hover:text-white">{link.name}</a>
+                        </li>
+                ))}
+            </ul>
+        </div>
+        <!-- Información -->
+        <div>
+            <h2 class="font-bold mb-3 text-2xl text-white">Información</h2>
+            <ul class="space-y-2">
+                {infoLinks.map(link => (
+                        <li>
+                            <a href={link.href} class="text-gray-100 hover:text-white">{link.name}</a>
+                        </li>
+                ))}
+            </ul>
+        </div>
+
+    </div>
+</footer>

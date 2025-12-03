@@ -1,0 +1,37 @@
+---
+interface Props {
+    titulo: string;
+}
+const { titulo } = Astro.props;
+import productosData from '../data/productos.json';
+const productos = productosData.hardware;
+---
+<section class="py-12 ">
+    <h2 class="text-3xl font-bold uppercase text-gray-900 mb-8 text-center">{titulo}</h2>
+    <div class=" grid grid-cols-3 gap-6 pb-8  ">
+        {productos.slice(0, 5).map((hardware) => (
+                <div class="w-full border-5  border-gray-200">
+                    <a href="" class="flex-col h-full bg-white">
+                        <div class="h-75 w-full bg-gray-50 flex items-center justify-center p-4">
+                            <img
+                                    src={hardware.imagen_url}
+                                    alt={hardware.nombre}
+                                    class="h-full w-full object-contain"
+                            />
+                        </div>
+                        <div class="p-4">
+                        <span class="text-xs font-bold text-blue-600 uppercase">
+                            {hardware.categoria}
+                        </span>
+                            <h3 class="mt-2 text-lg font-bold text-gray-900">
+                                {hardware.nombre}
+                            </h3>
+                            <p class="mt-4 text-xl font-extrabold text-gray-900">
+                                {"$"+hardware.precio}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+        ))}
+    </div>
+</section>
