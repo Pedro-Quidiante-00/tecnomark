@@ -1,21 +1,18 @@
 ---
-import { Image } from 'astro:assets';
-
-import {fetchFromAPI, STRAPI_BASE_URL} from '../lib/conections.ts';
+import { fetchFromAPI } from '../lib/conections.ts';
 const home = await fetchFromAPI('inicio');
 ---
 <section class="relative top-0 h-[700px] text-white text-center z-10 w-full">
     <div class="relative w-full h-full">
         <img
-                src={`${STRAPI_BASE_URL}${home.imagen.url}`}
+                src={home.imagen.url}
                 alt="teclado y mouse"
-                class="absolute w-screen h-screen object-cover"
+                class="absolute w-full h-full object-cover inset-0 "
         />
-
         <div class="absolute inset-0 bg-black/50"></div>
-            <div class="container relative mx-auto max-w-4xl h-full flex flex-col justify-center items-center text-center z-10">
-                <h1 class="text-8xl mb-5 font-extrabold">{home.titulo}</h1>
-                <p class="text-2xl mb-10">{home.subtitulo}</p>
-            </div>
+        <div class="container relative mx-auto max-w-4xl h-full flex flex-col justify-center items-center text-center z-10">
+            <h1 class="text-8xl mb-5 font-extrabold">{home.titulo}</h1>
+            <p class="text-2xl mb-10">{home.subtitulo}</p>
         </div>
+    </div>
 </section>
