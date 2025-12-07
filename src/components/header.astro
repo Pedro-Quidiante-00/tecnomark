@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import {Image} from "astro:assets";
 import Logo from "../assets/image/general/logo.png"
 const navLinks = [
     { name: "Celulares", href: "/celulares" },
@@ -13,13 +13,7 @@ const navLinks = [
 ---
 <header class="  flex w-full fixed text-white z-50 ">
     <div class="w-full flex justify-center items-center p-4 ">
-        <a href="/">
-            <Image
-                    src={Logo}
-                    alt="Logo"
-                    class="h-10 px-19 w-auto object-contain"
-            />
-        </a>
+        <Image src={Logo} alt="Logo" class="w-10 px-10" />
         <nav class="flex gap-x-13">{navLinks.map(link => (
                 <a
                         href={link.href}
