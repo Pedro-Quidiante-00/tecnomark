@@ -1,59 +1,61 @@
 ---
-import { Image } from 'astro:assets';
-import logo from "../assets/image/general/logo.png"
+import { fetchFromAPI } from "../lib/conections";
 
-import {fetchFromAPI} from "../lib/conections.ts";
-
-interface ItemsMenu {
+interface Link {
     label: string;
     url: string;
 }
 
-const menu: ItemsMenu[] = await fetchFromAPI('menunavs')
+interface Columna {
+    titulo: string;
+    links: Link[];
+}
 
-const logoslogan = {
-    name: "TecnoMark",
-    description: "Lo que buscas a la punta de tus dedos.",};
+interface Logo {
+    url: string;
+}
 
-const navLinks = [
-    { name: "Celulares", href: "/celulares" },
-    { name: "Hardware", href: "/hardware" },
-    { name: "Periféricos", href: "/perifericos" },
-    { name: "Notebook", href: "/notebook" },
-];
+interface FooterData {
+    marca: string;
+    eslogan: string;
+    logo: Logo;
+    columnas: Columna[];
+}
 
-const infoLinks = [
-    { name: "Sobre Nosotros", href: "/nosotros" },
-    { name: "Contacto", href: "/contacto" },
-];
+const footerData: FooterData = await fetchFromAPI('footer') || {};
+const { marca, eslogan, logo, columnas } = footerData;
 ---
-<footer class="bg-gray-950 relative">
-    <div class="container mx-auto py-10 grid grid-cols-3 gap-8 text-gray-700">
-        <div>
-            <Image src={logo} alt="logo" class="w-30 py-2 opacity-65"/>
-            <h2 class="text-2xl text-white font-bold" >{logoslogan.name}</h2>
-            <p class="mt-2 text-sm text-gray-100">{logoslogan.description}</p>
-        </div>
-        <div>
-            <h2 class="font-bold mb-3 text-2xl text-white">Navega</h2>
-            <ul class="space-y-2">
-                {navLinks.map(link => (
-                        <li>
-                            <a href={link.href} class="text-gray-100 hover:text-white">{link.name}</a>
-                        </li>
-                ))}
-            </ul>
-        </div>
-        <div>
-            <h2 class="font-bold mb-3 text-2xl text-white">Información</h2>
-            <ul class="space-y-2">
-                {infoLinks.map(link => (
-                        <li>
-                            <a href={link.href} class="text-gray-100 hover:text-white">{link.name}</a>
-                        </li>
-                ))}
-            </ul>
-        </div>
+<footer class="bg-black text-white py-10">
+    <div class="container mx-auto z-50">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            {/* 1. LOGO Y MARCA */}
+            <div>
+                        <img
+                                src={logo.url}
+                                alt="Logo"
+                                class="w-32 py-2 opacity-65 object-contain"
+                        />
+                <h2 class="text-2xl font-bold">{marca}</h2>
+                <p class="mt-2 text-sm text-gray-300">{eslogan}</p>
+            </div>
 
+
+            {columnas?.map((col) => (
+                    <div>
+                        <h2 class="font-bold mb-3 text-2xl">
+                            {col.titulo}
+                        </h2>
+
+                        <ul class="space-y-2">
+                            {col.links?.map((item) => (
+                                    <li class="hover:underline hover:text-gray-300 cursor-pointer">
+                                        <a href={item.url}>{item.label}</a>
+                                    </li>
+                            ))}
+                        </ul>
+                    </div>
+            ))}
+
+        </div>
     </div>
 </footer>
