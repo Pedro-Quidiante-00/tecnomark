@@ -3,16 +3,17 @@ import Layout from '../layouts/Layout.astro';
 
 import HomeComponent from '../components/HomeComponent.astro'
 import DestacadosComponent from '../components/DestacadosComponent.astro'
-import TelefonosComponent from '../components/telefonosComponent.astro';
-import HardwareComponent from "../components/HardwareComponent.astro";
+import ProductosComponent from '../components/productosComponent.astro'
 ---
 <Layout>
         <HomeComponent />
     <DestacadosComponent/>
-    <TelefonosComponent
+    <ProductosComponent
             titulo="Telefonos" cantidad={4}
+            categoria="telefonos"
     />
-    <HardwareComponent
-            titulo="Lo ultimo en hardware" cantidad={4}
+    <ProductosComponent
+            titulo="hardware" cantidad={4}
+            categoria="hardware"
     />
 </Layout>

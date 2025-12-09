@@ -7,7 +7,6 @@ const { data } = await response.json();
 const info = data?.[0];
 const productos = info.destacados || [];
 ---
-
 <section class="w-full py-12">
     <h2 class="text-3xl font-bold uppercase text-black mb-8 text-center">
         {info.titulo || "Productos Destacados"}

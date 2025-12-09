@@ -1,9 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Banner from "../components/banner.astro";
-import HardwareComponent from "../components/HardwareComponent.astro";
+import ProductosComponent from "../components/productosComponent.astro";
+
 ---
 <Layout>
     <Banner titulo="hardware" subtitulo="encuentra tu favorito"/>
-    <HardwareComponent titulo="encuentra tu favorito"/>
+    <ProductosComponent
+            titulo="hardware"
+            categoria="hardware"
+    />
 </Layout>

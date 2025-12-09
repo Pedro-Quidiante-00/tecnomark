@@ -1,9 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Banner from "../components/banner.astro";
-import TelefonosComponent from "../components/telefonosComponent.astro";
+
+import ProductosComponent from "../components/productosComponent.astro";
 ---
 <Layout>
     <Banner titulo="Telefonos" subtitulo="busca tu telefono favorito"/>
-    <TelefonosComponent titulo="Telefonos"/>
+    <ProductosComponent
+            titulo="telefonos"
+            categoria="telefonos"
+    />
 </Layout>

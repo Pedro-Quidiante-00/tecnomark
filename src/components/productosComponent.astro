@@ -4,13 +4,15 @@ import {fetchFromAPI} from '../lib/conections';
 interface Props {
     titulo: string;
     cantidad?: number;
+    categoria: string;
+
 }
-const { titulo, cantidad } = Astro.props;
+const { titulo, cantidad, categoria } = Astro.props;
 
 const todosLosProductos: any[] = await fetchFromAPI('productos') || [];
+const productosFiltrados = todosLosProductos.filter((item: any) => item.categoria === categoria);
 
-const hardwareFiltrado = todosLosProductos.filter((item: any) => item.categoria === 'notebook');
-const productos = hardwareFiltrado.slice(0, cantidad);
+const productos = productosFiltrados.slice(0, cantidad);
 ---
 
 <section class="w-full py-12">
@@ -24,7 +26,7 @@ const productos = hardwareFiltrado.slice(0, cantidad);
 
                         <div class="p-2">
                             <img
-                                    src={item.image?.url || '/placeholder.png'}
+                                    src={item.image?.url}
                                     alt={item.nombre}
                                     class="w-full h-auto"
                             />
