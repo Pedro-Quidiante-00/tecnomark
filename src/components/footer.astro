@@ -1,5 +1,5 @@
 ---
-import { fetchFromAPI } from "../lib/conections";
+import {fetchFromAPI} from "../lib/conections";
 
 interface Link {
     id: number;
@@ -19,7 +19,7 @@ const logo = await fetchFromAPI("logo");
 const { marca, eslogan, columnas } = footer;
 
 ---
-<footer class="bg-black text-white py-10">
+<footer class="relative bottom-0 w-full bg-black text-white py-10">
     <div class="container mx-auto z-50">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
             <div>
@@ -31,16 +31,12 @@ const { marca, eslogan, columnas } = footer;
                 <h2 class="text-2xl font-bold">{marca}</h2>
                 <p class="mt-2 text-sm text-gray-300">{eslogan}</p>
             </div>
-
-            {/* Mapeo de columnas */}
             {columnas?.map((col: Columna) => (
                     <div>
                         <h2 class="font-bold mb-3 text-2xl">
                             {col.titulo}
                         </h2>
-
                         <ul class="space-y-2">
-                            {/* AQUI ESTABA EL FALLO: Ahora que la URL es correcta, 'links' existirá */}
                             {col.links?.map((item: Link) => (
                                     <li class="hover:underline hover:text-gray-300 cursor-pointer">
                                         <a href={item.url}>{item.label}</a>

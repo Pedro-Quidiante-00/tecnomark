@@ -7,15 +7,14 @@ interface Props {
     categoria: string;
 
 }
-const { titulo, cantidad, categoria } = Astro.props;
+const {titulo, cantidad, categoria} = Astro.props;
 const todosLosProductos = await fetchFromAPI('productos');
 
 const productosFiltrados = todosLosProductos.filter((item: any) => item.categoria === categoria);
 const productos = productosFiltrados.slice(0, cantidad);
 ---
-
 <section class="w-full py-12">
-    <h2 class="text-3xl font-bold uppercase text-black mb-8 text-center">
+    <h2 class="text-3xl my-8 mb-10 font-bold uppercase text-black text-center">
         {titulo}
     </h2>
     <div class="max-w-7xl w-full gap-6 mx-auto grid grid-cols-1 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">

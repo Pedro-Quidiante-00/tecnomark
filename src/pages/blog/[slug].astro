@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { fetchFromAPI } from '../../lib/conections';
+import {fetchFromAPI} from '../../lib/conections';
 interface Post {
     slug: string;
     titulo: string;
@@ -33,8 +33,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
 ---
 
 <Layout>
-
-    {/* ---- FOTO DE FONDO ---- */}
     <div class="w-full h-[400px] md:h-[500px] relative">
         <img
                 src={post.cover?.url || '/placeholder.png'}
@@ -43,11 +41,7 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
         />
         <div class="absolute inset-0 bg-black/40"></div>
     </div>
-
-    {/* ---- TARJETA FLOTANTE ---- */}
     <article class="max-w-4xl bg-white relative z-10 -mt-32 mb-20 p-6 md:p-12 rounded-xl shadow-2xl mx-auto md:mx-auto">
-
-        {/* ---- Navegación ---- */}
         <div class="flex justify-between items-center mb-6 border-b border-gray-200 pb-4">
             <a href="/blog" class="font-lectura text-gray-950 hover:text-black transition-colors font-bold text-sm">
                 Volver
@@ -56,8 +50,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
                 {categoriaNombre}
             </span>
         </div>
-
-        {/* ---- Encabezado ---- */}
         <header class="mb-8 text-center">
             <h1 class="text-3xl font-titulo md:text-5xl font-black text-gray-950 mb-4 leading-tight">
                 {post.titulo}
@@ -69,8 +61,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
                     </p>
             )}
         </header>
-
-        {/* ---- Contenido ---- */}
         <div class="text-gray-950">
 
             <div class="bg-gray-50 p-6 rounded-lg mb-8 border-l-4 border-gray-300">
@@ -82,9 +72,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
             <div class="font-lectura whitespace-pre-line text-lg leading-loose px-2 md:px-4 text-gray-950">
                 {post.contenido}
             </div>
-
         </div>
-
     </article>
-
 </Layout>

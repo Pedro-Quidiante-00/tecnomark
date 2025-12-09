@@ -1,8 +1,8 @@
 ---
-import { PUBLIC_STRAPI_URL } from '../lib/conections';
+import {PUBLIC_STRAPI_URL} from '../lib/conections';
 
 const response = await fetch(`${PUBLIC_STRAPI_URL}/categoria-noticias?populate[posts][populate]=cover`);
-const { data } = await response.json();
+const {data} = await response.json();
 
 const categorias = data || [];
 ---

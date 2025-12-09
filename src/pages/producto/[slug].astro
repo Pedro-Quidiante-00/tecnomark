@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { fetchFromAPI } from '../../lib/conections';
+import {fetchFromAPI} from '../../lib/conections';
 
 export async function getStaticPaths() {
     const productos = await fetchFromAPI('productos');
@@ -14,78 +14,73 @@ const detalles = prod.detalles || {};
 ---
 <Layout>
     <div class="min-h-screen flex flex-col justify-center items-center py-32 px-4">
-
         <div class="w-full max-w-5xl bg-white p-6 md:p-10 rounded-lg shadow-lg border border-gray-200">
-
-        <a href="/" class="block mb-6 hover:underline text-gray-600">
-             Volver al inicio
-        </a>
+            <a href="/" class="block mb-6 hover:underline text-gray-600">
+                Volver al inicio
+            </a>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-            <div class="border border-gray-300 p-2 rounded bg-white">
-                <img
-                        src={prod.image?.url}
-                        alt={prod.nombre}
-                        class="w-full h-auto object-contain "
-                />
-            </div>
-
-
-            <div>
-
-                <span class="block text-sm text-gray-500 mb-2">
-                    {prod.categoria || 'Producto'}
-                </span>
-
-                <h1 class="text-3xl mb-4">
-                    {prod.nombre}
-                </h1>
-
-                <p class="text-2xl mb-6">
-                    $ {Number(prod.precio).toLocaleString('es-CL')}
-                </p>
-
-                <div class="border-t border-gray-300 pt-4">
-                    <h3 class="font-bold mb-4">Detalles Técnicos</h3>
-                    <ul class="w-full">
-                        {detalles.pantalla && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>Pantalla:</span> <span>{detalles.pantalla}</span>
-                                </li>
-                        )}
-                        {detalles.procesador && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>Procesador:</span> <span>{detalles.procesador}</span>
-                                </li>
-                        )}
-                        {detalles.ram && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>RAM:</span> <span>{detalles.ram}</span>
-                                </li>
-                        )}
-                        {detalles.memoria_interna && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>Almacenamiento:</span> <span>{detalles.memoria_interna}</span>
-                                </li>
-                        )}
-                        {detalles.bateria && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>Batería:</span> <span>{detalles.bateria}</span>
-                                </li>
-                        )}
-                        {(detalles.gpu || detalles.tarjetas_de_video) && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>Gráfica:</span> <span>{detalles.gpu || detalles.tarjetas_de_video}</span>
-                                </li>
-                        )}
-                        {detalles.sistema_operativo && (
-                                <li class="flex justify-between border-b border-gray-200 py-2">
-                                    <span>S. Operativo:</span> <span>{detalles.sistema_operativo}</span>
-                                </li>
-                        )}
-                    </ul>
+                <div class="border border-gray-300 p-2 rounded bg-white">
+                    <img
+                            src={prod.image?.url}
+                            alt={prod.nombre}
+                            class="w-full h-auto object-contain "
+                    />
                 </div>
 
+                <div>
+                    <span class="block text-sm text-gray-500 mb-2">
+                        {prod.categoria || 'Producto'}
+                    </span>
+
+                    <h1 class="text-3xl mb-4">
+                        {prod.nombre}
+                    </h1>
+
+                    <p class="text-2xl mb-6">
+                        $ {Number(prod.precio).toLocaleString('es-CL')}
+                    </p>
+
+                    <div class="border-t border-gray-300 pt-4">
+                        <h3 class="font-bold mb-4">Detalles Técnicos</h3>
+                        <ul class="w-full">
+                            {detalles.pantalla && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>Pantalla:</span> <span>{detalles.pantalla}</span>
+                                    </li>
+                            )}
+                            {detalles.procesador && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>Procesador:</span> <span>{detalles.procesador}</span>
+                                    </li>
+                            )}
+                            {detalles.ram && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>RAM:</span> <span>{detalles.ram}</span>
+                                    </li>
+                            )}
+                            {detalles.memoria_interna && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>Almacenamiento:</span> <span>{detalles.memoria_interna}</span>
+                                    </li>
+                            )}
+                            {detalles.bateria && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>Batería:</span> <span>{detalles.bateria}</span>
+                                    </li>
+                            )}
+                            {(detalles.gpu || detalles.tarjetas_de_video) && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>Gráfica:</span> <span>{detalles.gpu || detalles.tarjetas_de_video}</span>
+                                    </li>
+                            )}
+                            {detalles.sistema_operativo && (
+                                    <li class="flex justify-between border-b border-gray-200 py-2">
+                                        <span>S. Operativo:</span> <span>{detalles.sistema_operativo}</span>
+                                    </li>
+                            )}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
