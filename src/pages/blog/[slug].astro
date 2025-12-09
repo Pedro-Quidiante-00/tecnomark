@@ -19,8 +19,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
 
 <Layout title={post.titulo}>
     <article class="max-w-3xl mx-auto p-4">
-
-        {/* 1. NAVEGACIÓN Y CATEGORÍA */}
         <div class="flex justify-between items-center mb-8 border-b pb-2">
             <a href="/blog" class="hover:underline">
                 ← Volver
@@ -29,8 +27,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
                 {categoriaNombre}
             </span>
         </div>
-
-        {/* 2. ENCABEZADO (Header) */}
         <header class="text-center mb-8">
             <h1 class="text-3xl font-bold mb-4">
                 {post.titulo}
@@ -42,8 +38,6 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
                     </p>
             )}
         </header>
-
-        {/* 3. IMAGEN PRINCIPAL */}
         <div class="w-full mb-8">
             <img
                     src={post.cover?.url || '/placeholder.png'}
@@ -51,19 +45,12 @@ const categoriaNombre = post.categoria?.nombre || 'Blog';
                     class="w-full h-auto"
             />
         </div>
-
-        {/* 4. CONTENIDO DEL ARTÍCULO */}
         <div>
-
-            {/* Resumen / Lead */}
             <div class="border-l-4 border-gray-300 pl-4 mb-8 italic">
                 <p>
                     {post.resumen}
                 </p>
             </div>
-
-            {/* ---> CONTENIDO COMPLETO <--- */}
-            {/* IMPORTANTE: Mantener 'whitespace-pre-line' para los saltos de línea */}
             <div class="whitespace-pre-line text-lg leading-relaxed">
                 {post.contenido}
             </div>

@@ -19,15 +19,11 @@ const detalles = prod.detalles || {};
 
         <div class="w-full max-w-5xl bg-white p-6 md:p-10 rounded-lg shadow-lg border border-gray-200">
 
-        {/* Link de volver simple */}
         <a href="/" class="block mb-6 hover:underline text-gray-600">
              Volver al inicio
         </a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-        {/* ESTRUCTURA GRID: 2 Columnas (Imagen | Info) */}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-            {/* COLUMNA 1: IMAGEN */}
             <div class="border border-gray-300 p-2 rounded bg-white">
                 <img
                         src={prod.image?.url}
@@ -36,7 +32,7 @@ const detalles = prod.detalles || {};
                 />
             </div>
 
-            {/* COLUMNA 2: INFORMACIÓN */}
+
             <div>
 
                 <span class="block text-sm text-gray-500 mb-2">
@@ -51,7 +47,6 @@ const detalles = prod.detalles || {};
                     $ {Number(prod.precio).toLocaleString('es-CL')}
                 </p>
 
-                {/* TABLA DE DETALLES */}
                 <div class="border-t border-gray-300 pt-4">
                     <h3 class="font-bold mb-4">Detalles Técnicos</h3>
 

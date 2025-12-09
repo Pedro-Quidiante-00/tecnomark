@@ -19,7 +19,6 @@ const productos = hardwareFiltrado.slice(0, cantidad);
     </h2>
     <div class="max-w-7xl w-full gap-6 mx-auto grid grid-cols-1 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {productos.map((item: any) => (
-            /* CARD: Solo tiene un borde simple 'border' para delimitar el área */
                 <article class=" rounded-2xl border-4 border-gray-300 h-full flex flex-col">
                     <a href={`/producto/${item.slug}`} class="flex flex-col h-full">
 
